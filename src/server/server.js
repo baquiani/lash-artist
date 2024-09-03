@@ -12,6 +12,10 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(express.json());
 
+app.use(cors({
+  origin: 'https://lash-artist.vercel.app',
+  credentials: true,
+}));
 // MongoDB model
 const ReservationSchema = new mongoose.Schema({
   name: String,
