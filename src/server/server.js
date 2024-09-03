@@ -11,9 +11,9 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 app.use(express.json());
-
+require('dotenv').config();
 app.use(cors({
-  origin: 'https://lash-artist.vercel.app',
+  origin: process.env.FRONTEND_URL,
   credentials: true,
 }));
 // MongoDB model
@@ -55,7 +55,7 @@ const User = mongoose.model('User', UserSchema);
 module.exports = User;
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/reservations', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/reservations' , {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
@@ -90,8 +90,8 @@ app.post('/api/reservations', async (req, res) => {
     const transporter = nodemailer.createTransport({
       service: 'Gmail',
       auth: {
-        user: 'lolmc161@gmail.com',  // Ideally use environment variables
-        pass: 'fhhq frue qzke usdm'
+        user: process.env.EMAIL_USER,  // Ideally use environment variables
+        pass: process.env.EMAIL_PASS
       }
     });
 
@@ -132,7 +132,7 @@ app.post('/api/register', async (req,res) => {
     const newUser = new User({name, email, password});
     await newUser.save();
 
-    const token = jwt.sign({id:newUser._id}, 'your_jwt_secret_key', {expiresIn: '1h'});
+    const token = jwt.sign({id:newUser._id}, process.env.JWT_SECRET, {expiresIn: '1h'});
 
     res.status(201).json({message:'User registered successfully', token});
 
