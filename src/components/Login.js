@@ -10,7 +10,7 @@ function LoginForm(){
     const [message, setMessage] = useState('');
     const [isError, setIsError] = useState(false);
     const navigate = useNavigate();
-    const API_URL = 'https://08eb-86-127-76-46.ngrok-free.app'
+    const API_URL = 'https://6348-86-127-76-46.ngrok-free.app'
 
     const handleSubmit= async (event) => {
         event.preventDefault();
