@@ -15,7 +15,7 @@ function LoginForm(){
     const handleSubmit= async (event) => {
         event.preventDefault();
         try{
-            const response= await axios.post('${API_URL}/api/login', {email, password});
+            const response= await axios.post('https://6348-86-127-76-46.ngrok-free.app/api/login', {email, password});
 
             setMessage(response.data.message);
             setIsError(false);

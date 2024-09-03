@@ -15,7 +15,7 @@ function RegistrationForm() {
         event.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:5000/api/register', { name, email, password });
+            const response = await axios.post('https://6348-86-127-76-46.ngrok-free.app/api/register', { name, email, password });
             setMessage(response.data.message);
             setIsError(false);
         } catch (error) {
