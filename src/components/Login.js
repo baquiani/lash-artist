@@ -10,12 +10,12 @@ function LoginForm(){
     const [message, setMessage] = useState('');
     const [isError, setIsError] = useState(false);
     const navigate = useNavigate();
-
+    const API_URL = 'https://08eb-86-127-76-46.ngrok-free.app'
 
     const handleSubmit= async (event) => {
         event.preventDefault();
         try{
-            const response= await axios.post('http://192.168.1.102:5000/api/login', {email, password});
+            const response= await axios.post('${API_URL}/api/login', {email, password});
 
             setMessage(response.data.message);
             setIsError(false);
