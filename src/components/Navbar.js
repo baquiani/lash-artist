@@ -29,7 +29,7 @@ const Navigation = () => {
 
         </Navbar.Brand>
         
-        <Navbar.Toggle aria-controls="basic-navbar-nav" variant="outline-dark"/>
+        <Navbar.Toggle aria-controls="basic-navbar-nav"/>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
           <Button as={Link} to ="/" variant="outline-light" className='text-dark'>Home</Button>
