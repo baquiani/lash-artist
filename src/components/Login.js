@@ -15,7 +15,7 @@ function LoginForm(){
     const handleSubmit= async (event) => {
         event.preventDefault();
         try{
-            const response= await axios.post('https://6348-86-127-76-46.ngrok-free.app/api/login', {email, password});
+            const response= await axios.post('https://ad55-86-127-76-46.ngrok-free.app/api/login', {email, password});
 
             setMessage(response.data.message);
             setIsError(false);
@@ -35,7 +35,7 @@ function LoginForm(){
     };
 
     return(
-        <Container>
+        <Container className='d-flex flex-column min-vh-100'>
             {message && <Alert variant={isError ? "danger" : "success"}>{message}</Alert>}
             <Form onSubmit={handleSubmit} className='m-2' style={{maxWidth:'400px', textAlign:'left'}}>
                 <Form.Group controlId="formEmail">

@@ -10,15 +10,15 @@ const HeroSection = () => {
    
    <Row>
 
-    <Col className='bg-white m'>
+    <Col className='bg-white m-0'>
     
     </Col>
    </Row>
     <Row className='g-0 mt-5 pt-5 align-items-center'>
         
-      <Col className='border-end border-dark'>
-      <Card style={{width:'38rem'}}>
-        <Card.Img variant="bottom" src={image1}/>
+      <Col xs={12} md={6} className='border-end border-dark mb-4 mb-md-0 p-4'>
+      <Card style={{width:'100%'}}>
+        <Card.Img variant="bottom"src={image1}/>
         
       </Card>
       </Col>  

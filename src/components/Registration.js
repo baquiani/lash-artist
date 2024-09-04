@@ -25,7 +25,7 @@ function RegistrationForm() {
     };
 
     return (
-        <Container>
+        <Container className='d-flex flex-column min-vh-100'>
             {message && <Alert variant={isError ? "danger" : "success"}>{message}</Alert>}
             <Form onSubmit={handleSubmit} className='m-2' style={{ maxWidth: '400px', textAlign: 'left' }}>
                 <Form.Group controlId="FormName">

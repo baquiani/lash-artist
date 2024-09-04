@@ -46,9 +46,9 @@ const ReservationForm = () => {
 
 
 return (
-    <Container>
+    <Container fluid className='m-5 d-flex flex-column min-vh-100'>
         {successMessage && <Alert variant="success">{successMessage}</Alert>}
-        {isLoggedIn ? (<Form onSubmit={handleSubmit} className='m-2' style={{maxWidth:'400px', textAlign:'left'}}>
+        {isLoggedIn ? (<Form onSubmit={handleSubmit} className='g-0 mt-5 pt-5 align-items-center' style={{maxWidth:'400px', textAlign:'left'}}>
             <Form.Group controlId="FormName">
                 <Form.Label>Name</Form.Label>
                 <Form.Control
