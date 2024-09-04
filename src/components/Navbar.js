@@ -28,11 +28,11 @@ const Navigation = () => {
           
 
         </Navbar.Brand>
-        <Navbar.Brand as={Link} to="/" className='text-dark'>Lashes by Madalina</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" bg="dark"/>
+        
+        <Navbar.Toggle aria-controls="basic-navbar-nav" variant="outline-dark"/>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
-            <Nav.Link href="/" className='text-dark'>Home</Nav.Link>
+          <Button as={Link} to ="/" variant="outline-light" className='text-dark'>Home</Button>
             
 
             <Button as={Link} to ="/programare" variant="outline-light" className='text-dark'>Rezervare</Button>
