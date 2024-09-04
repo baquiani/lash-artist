@@ -20,7 +20,7 @@ const Navigation = () => {
     window.location.reload();
   }
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" className='mb-1 text-white border-bottom border-dark'>
+    <Navbar bg="white" variant="light" expand="lg" className='mb-1 text-white border-bottom border-dark'>
       
         <Navbar.Brand as={Link} to="/">
           <img src={icon} width="250" height="50" className='d-inline-block align-top' alt="logo" />
